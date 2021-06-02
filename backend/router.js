@@ -1,9 +1,8 @@
 const express = require('express')
 const router = express.Router()
 
-router.get('/api/test', (req, res) => {
-  console.log('req ...', req)
-  res.send('SENT')
+router.get('/', (req, res) => {
+  res.send('Server has started and is running!')
 })
 
 module.exports = router
