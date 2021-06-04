@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 export default function SignIn() {
+  const history = useHistory()
   const [name, setName] = useState('')
   const [room, setRoom] = useState('')
 
@@ -23,6 +24,10 @@ export default function SignIn() {
             className="joinInput mt-20"
             type="text"
             onChange={event => setRoom(event.target.value)}
+            onKeyPress={e =>
+              e.key === 'Enter' &&
+              history.push(`/chat?name=${name}&room=${room}`)
+            }
           />
         </div>
         <Link

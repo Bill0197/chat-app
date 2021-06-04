@@ -2,6 +2,7 @@ const http = require('http')
 const express = require('express')
 const socketio = require('socket.io')
 const cors = require('cors')
+const PORT = process.env.PORT || 4000
 
 const { addUser, removeUser, getUser, getUsersInRoom } = require('./users')
 
@@ -62,6 +63,4 @@ io.on('connect', socket => {
   })
 })
 
-server.listen(process.env.PORT || 4000, () =>
-  console.log(`Server has started.`)
-)
+server.listen(PORT, () => console.log(`Server is running on port ${PORT}`))
