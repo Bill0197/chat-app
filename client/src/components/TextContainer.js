@@ -6,7 +6,7 @@ const TextContainer = ({ users }) => (
   <div className="textContainer">
     <div>
       <h1>
-        Open up a new room and ask others to join with the room name. 
+        Open up a new room and ask others to join with the same room name. 
        <br/> There, you
         can chat with your friends realtime!
       </h1>
