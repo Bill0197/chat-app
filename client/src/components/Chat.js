@@ -7,7 +7,7 @@ import Messages from './Messages'
 import InfoBar from './InfoBar'
 import Input from './Input'
 
-const ENDPOINT = 'https://project-chat-application.herokuapp.com/'
+const ENDPOINT = 'http://localhost:4000/'
 
 let socket
 
@@ -31,7 +31,7 @@ const Chat = ({ location }) => {
         alert(error)
       }
     })
-  }, [ENDPOINT, location.search])
+  }, [location.search])
 
   useEffect(() => {
     socket.on('message', message => {
