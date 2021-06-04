@@ -27,7 +27,7 @@ export default function Join() {
           />
         </div>
         <Link
-          onClick={e => !name || (!room && e.preventDefault())}
+          onClick={e => (!name || !room) && e.preventDefault()}
           to={`/chat?name=${name}&room=${room}`}
         >
           <button type="submit" className="button mt-20">
