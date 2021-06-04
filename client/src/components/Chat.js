@@ -6,9 +6,9 @@ import TextContainer from './TextContainer'
 import Messages from './Messages'
 import InfoBar from './InfoBar'
 import Input from './Input'
+import config from '../config'
 
-const ENDPOINT = 'http://localhost:4000/'
-
+const ENDPOINT = config.baseURI
 let socket
 
 const Chat = ({ location }) => {
